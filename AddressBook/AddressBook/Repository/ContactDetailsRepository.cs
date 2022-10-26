@@ -16,12 +16,12 @@ namespace AddressBook.Repository
             ContactDetails contactDetail = new ContactDetails();
             contactDetail.FirstName = firstName;
             contactDetail.LastName = lastName;
-            contactDetail.MobileNumber = Convert.ToInt64(mobileNumber);
+            contactDetail.MobileNumber = mobileNumber;
             contactDetail.EMail = eMail;
             contactDetail.Address = address;
             contactDetail.City = city;
             contactDetail.State = state;
-            contactDetail.Zip = Convert.ToInt32(zip);
+            contactDetail.Zip = zip;
             contactDetails.Add(contactDetail.MobileNumber, contactDetail);
         }
 
