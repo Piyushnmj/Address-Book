@@ -9,9 +9,9 @@ namespace AddressBook.Repository
 {
     internal class ContactDetailsRepository
     {
-        Dictionary<string, ContactDetails> contactDetails = new Dictionary<string, ContactDetails>();
+        Dictionary<long, ContactDetails> contactDetails = new Dictionary<long, ContactDetails>();
 
-        public void AddContactDetails(string firstName, string lastName, string mobileNumber, string eMail, string address, string city, string state, string zip)
+        public void AddContactDetails(string firstName, string lastName, long mobileNumber, string eMail, string address, string city, string state, int zip)
         {
             ContactDetails contactDetail = new ContactDetails();
             contactDetail.FirstName = firstName;
@@ -22,7 +22,7 @@ namespace AddressBook.Repository
             contactDetail.City = city;
             contactDetail.State = state;
             contactDetail.Zip = Convert.ToInt32(zip);
-            contactDetails.Add(Convert.ToString(contactDetail.MobileNumber), contactDetail);
+            contactDetails.Add(contactDetail.MobileNumber, contactDetail);
         }
 
         public void DisplayContact()
