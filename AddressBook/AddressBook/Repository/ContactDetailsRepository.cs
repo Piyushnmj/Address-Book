@@ -9,11 +9,31 @@ namespace AddressBook.Repository
 {
     internal class ContactDetailsRepository
     {
-        Dictionary<string, ContactDetails> contactDetails = new Dictionary<string, ContactDetails>();
+        Dictionary<long, ContactDetails> contactDetails = new Dictionary<long, ContactDetails>();
 
         public void AddContactDetails(ContactDetails contactDetail) //using mobile number because it is unique.
         {
-            contactDetails.Add(Convert.ToString(contactDetail.MobileNumber), contactDetail);
+            contactDetails.Add(contactDetail.MobileNumber, contactDetail);
+        }
+
+        public void EditContactDetails(long mobileNumber, string firstName)
+        {
+            var obj = contactDetails[mobileNumber];
+            contactDetails.Remove(mobileNumber);
+            obj.FirstName = firstName;
+            contactDetails.Add(obj.MobileNumber, obj);
+        }
+
+        public ContactDetails GetUsingFirstName(string firstName)
+        {
+            foreach (var item in contactDetails)
+            {
+                if (item.Value.FirstName == firstName)
+                {
+                    return item.Value;
+                }
+            }
+            return null;
         }
 
         public void DisplayContact()

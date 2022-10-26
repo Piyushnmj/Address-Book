@@ -7,42 +7,46 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book");           
+            Console.WriteLine("Welcome to Address Book");
+            
+            Console.WriteLine("Add");
+            Console.WriteLine("Edit");
+            while (true);
 
             Console.WriteLine("\nEnter First Name: ");
-            string? firstName = Console.ReadLine();
+            string firstName = Console.ReadLine();
 
             Console.WriteLine("\nEnter Last Name: ");
-            string? lastName = Console.ReadLine();
+            string lastName = Console.ReadLine();
 
             Console.WriteLine("\nEnter Mobile Number: ");
-            string? mobileNumber = Console.ReadLine();
+            long mobileNumber = Convert.ToInt64(Console.ReadLine());
 
             Console.WriteLine("\nEnter EMail: ");
-            string? eMail = Console.ReadLine();
+            string eMail = Console.ReadLine();
 
             Console.WriteLine("\nEnter Address: ");
-            string? address = Console.ReadLine();
+            string address = Console.ReadLine();
 
             Console.WriteLine("\nEnter City: ");
-            string? city = Console.ReadLine();
+            string city = Console.ReadLine();
 
             Console.WriteLine("\nEnter State: ");
-            string? state = Console.ReadLine();
+            string state = Console.ReadLine();
 
             Console.WriteLine("\nEnter Zip: ");
-            string? zip = Console.ReadLine();
+            int zip = Convert.ToInt32(Console.ReadLine());
 
             ContactDetails contactDetail = new ContactDetails()
             {
                 FirstName = firstName,
                 LastName = lastName,
-                MobileNumber = Convert.ToInt64(mobileNumber),
+                MobileNumber = mobileNumber,
                 EMail = eMail,
                 Address = address,
                 City = city,
                 State = state,
-                Zip = Convert.ToInt32(zip)
+                Zip = zip
             };
 
             ContactDetailsRepository contactDetails = new ContactDetailsRepository();
