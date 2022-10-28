@@ -73,13 +73,9 @@ namespace AddressBook
 
             }
 
-            //var details = contactDetails.GetUsingFirstName(firstName);
-            //Console.WriteLine("Enter First Name");
-            //contactDetails.GetUsingFirstName(Console.ReadLine());
             contactDetails.DisplayContact();
             Console.ReadLine();
         }
     }
-
 }
 

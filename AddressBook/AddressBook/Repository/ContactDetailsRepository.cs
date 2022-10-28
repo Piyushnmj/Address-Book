@@ -75,37 +75,6 @@ namespace AddressBook.Repository
             }
         }
 
-        //public ContactDetails GetUsingFirstName(string firstName)
-        //{
-        //    foreach (var item in contactDetails)
-        //    {
-        //        if (item.Value.FirstName.Equals(firstName))
-        //        {
-        //            return item.Value;
-        //        }
-        //    }
-        //    return null;
-        //}
-
-        public void GetUsingFirstName(string firstName)
-        {
-            foreach (var item in contactDetails)
-            {
-                if (item.Value.FirstName.Contains(firstName))
-                {
-                    item.Value.FirstName.Contains(firstName);
-                    //Console.WriteLine($"\nFirst Name::{item.Value.FirstName}");
-                    //Console.WriteLine($"Last Name::{item.Value.LastName}");
-                    //Console.WriteLine($"Mobile Number::{item.Value.MobileNumber}");
-                    //Console.WriteLine($"EMail::{item.Value.EMail}");
-                    //Console.WriteLine($"Address::{item.Value.Address}");
-                    //Console.WriteLine($"City::{item.Value.City}");
-                    //Console.WriteLine($"State::{item.Value.State}");
-                    //Console.WriteLine($"Zip::{item.Value.Zip}");
-                }
-            }
-        }
-
         public void DisplayContact()
         {
             foreach (var item in contactDetails)
