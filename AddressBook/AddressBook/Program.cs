@@ -66,17 +66,17 @@ namespace AddressBook
             {
                 Console.WriteLine("\nEnter Mobile Number");
                 contactDetails.EditContactDetails(Convert.ToInt64(Console.ReadLine()));
-
-                //Console.WriteLine("Enter 2 to edit Contact Details or enter E to exit");
-                //input2 = Console.ReadLine();
-
                 contactDetails.DisplayContact();
+
+                Console.WriteLine("\nEnter Y to edit Contact Details or enter E to exit");
+                input2 = Console.ReadLine();
+
             }
 
             //var details = contactDetails.GetUsingFirstName(firstName);
             //Console.WriteLine("Enter First Name");
             //contactDetails.GetUsingFirstName(Console.ReadLine());
-            //contactDetails.DisplayContact();
+            contactDetails.DisplayContact();
             Console.ReadLine();
         }
     }
