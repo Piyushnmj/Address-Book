@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBook.Model
 {
-    internal class ContactDetails
+    public class ContactDetails
     {
         public string? UniqueName { get; set; }
         public string? FirstName { get; set; }
@@ -17,6 +17,7 @@ namespace AddressBook.Model
         public string? City { get; set; }
         public string? State { get; set; }
         public int Zip { get; set; }
+
     }
 }
 
